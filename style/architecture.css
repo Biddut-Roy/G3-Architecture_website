@@ -1,0 +1,6 @@
+/* Work Sans font size */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:ital,wght@0,400;0,700;1,800&family=Work+Sans:wght@400;600;700&display=swap');
+
+h1{ 
+    font-family: Work Sans;
+}
