@@ -126,41 +126,111 @@ main {}
     font-weight: 400;
     line-height: 26px;
 }
-/* end acontainer section */
+
+/* end container section */
+/* start a feature section */
+.features-container {
+    display: flex;
+    width: 90%;
+    height: 800px;
+    margin: 10px auto;
+    border: 2PX solid red;
+}
+.features-container-title{
+    width: 60%;
+    padding: 30px;
+    border: 2px solid black;
+}
+
+.feature-img {
+    width: 40%;
+    border: 2px dotted blue;
+}
+.feature-img >img{
+    width:100%;
+}
+
+.feature-title {
+    color: var(--dark-01, #131313);
+    font-size: 3rem;
+    font-weight: 700;
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+}
+
+.feature-des {
+    color: var(--dark-03, #727272);
+    font-weight: 400;
+    line-height: 26px;
+    padding: 5px;
+}
+.feature-card{
+    
+    width: 70%;
+    margin: 5px;
+    padding-left: 15px;
+}
+
+
+
+
 /* start a fact section */
-.fact{
+.fact {
     /* width: 90%; */
     margin: 30px auto;
 }
-.fact-title-container{
+
+.fact-title-container {
     width: 90%;
-    border: 2px solid black;
     margin: 0 auto;
 }
-.facts-card-container{
+
+.facts-card-container {
     display: flex;
     justify-content: space-around;
     margin-top: 30px;
 }
-.card{
+
+.card {
+    height: 150px;
+    width: 150px;
     text-align: center;
     margin: 0;
     border-radius: 8px;
     border: 1px solid #FF900E;
     padding: 50px 25px;
 }
-.card-status{
+
+.card-status {
     margin: 0;
 }
-.card-title{
-color: var(--dark-03, #727272);
-text-align: center;
-font-size: 1.2rem;
-font-weight: 600;
-margin: 0;
+
+.card-title {
+    color: var(--dark-03, #727272);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
 
 }
 
+/* start a sponpors section */
+.Sponspors {
+
+    text-align: center;
+}
+
+.sponspors-img-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    padding: 30px;
+}
+
+.sponspors-img-container img {
+    width: 120px;
+    height: 30px;
+}
 
 
 
@@ -176,36 +246,91 @@ margin: 0;
 
 
 /* responsive Media Query */
+
 @media screen and (max-width: 576px) {
     nav {
         flex-direction: column;
+        margin: 0;
+        padding: 0;
     }
 
-    .banner-content ,.team-content {
+    nav ul {
+        padding: 0;
+    }
+
+    .banner-content,
+    .team-content {
         width: 90%;
     }
-    .team-cointainer{
+
+    .banner-title {
+        font-size: 1rem;
+    }
+
+    .team-cointainer {
         flex-direction: column-reverse;
     }
-    .teams-img{
+
+    .teams-img {
         grid-template-columns: 1fr;
     }
+
+    .fact {
+        flex-direction: column-reverse;
+        width: 90%;
+    }
+
+    .facts-card-container,
+    .sponspors-img-container {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .card {
+        margin: 5px;
+    }
+
+    .sponspors-img-container img {
+        padding: 30px;
+    }
+
 }
+
+
 
 /* Tablet/ medium devices */
 
 @media screen and (min-width: 576px) and (max-width: 922px) {
+    nav {
+        justify-content: space-evenly;
+    }
 
     .banner-content {
         width: 100%;
     }
-    .team-cointainer{
+
+    .team-cointainer {
         flex-direction: column-reverse;
     }
-    .teams-img{
+
+    .teams-img {
         gap: 0.5rem;
     }
+
     .team-content {
         width: 90%;
+    }
+
+    .card {
+        margin: 10px;
+    }
+
+    .sponspors-img-container {
+        gap: 5px;
+    }
+
+    .sponspors-img-container img {
+        width: 70px;
     }
 }
